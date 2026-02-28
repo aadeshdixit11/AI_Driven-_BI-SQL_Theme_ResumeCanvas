@@ -26,7 +26,8 @@ Instead of a traditional text résumé, it leverages multiple AI tools to genera
 
 ## 📂 Repository Contents
 - `AI-Driven SQL Resume Canvas.html` → Final interactive résumé in HTML format.  
-- `AI-Driven SQL Resume Canvas.png` → Screenshot of the résumé dashboard.  
+- `AI-Driven SQL Resume Canvas image.png` → Screenshot of the résumé dashboard.
+- `AI-Driven SQL Resume Canvas pdf.pdf` → Pdf copy of the résumé dashboard  
 - `AI-Driven SQL Resume Canvas HTML Text.txt` → Raw HTML code text.  
 - `Case Study_ Architecting the AI-Driven SQL Resume Canvas.pdf` → Detailed case study of the project workflow.  
 - `README.md` → Documentation.  
