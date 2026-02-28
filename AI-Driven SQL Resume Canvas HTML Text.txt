@@ -1,0 +1,280 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Data Analyst Dashboard Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #4ade80;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .dashboard-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .dashboard-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .sql-header {
+            color: var(--accent-green);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .kpi-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .kpi-label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .status-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 2px solid var(--border);
+            color: var(--accent-green);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-main);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .bar-container {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--accent-blue);
+        }
+
+        @media (max-width: 1024px) {
+            body { padding: 1rem; }
+            .grid { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header / Global Filters Area -->
+    <header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-700 pb-6">
+        <div>
+            <h1 class="text-4xl font-black tracking-tight text-white mb-1">CANDIDATE_DATA_VIEW</h1>
+            <p class="mono text-accent-blue text-lg">ROLE: Aspiring Data & Business Analyst</p>
+        </div>
+        <div class="flex gap-4 mono text-sm text-slate-400">
+            <div><span class="text-emerald-400">LAST_REFRESHED:</span> 2026-02-09</div>
+            <div><span class="text-emerald-400">STATUS:</span> OPEN_TO_WORK</div>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-12 gap-6">
+        
+        <!-- Sidebar KPI Column -->
+        <div class="col-span-12 lg:col-span-3 flex flex-col gap-6">
+            
+            <!-- Profile / Summary -->
+            <div class="dashboard-card border-l-4 border-l-emerald-400">
+                <div class="sql-header mono">-- SELECT * FROM SUMMARY</div>
+                <p class="text-sm leading-relaxed text-slate-300 italic">
+                    "Aspiring Data and Business Analyst with expertise in Excel, SQL, and Power BI. Focused on bridging data and business outcomes to drive organizational growth."
+                </p>
+            </div>
+
+            <!-- Skill KPIs -->
+            <div class="dashboard-card">
+                <div class="sql-header mono">-- AGGREGATE_SKILLS</div>
+                <div class="space-y-4 mt-2">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span class="mono">SQL / PYTHON</span><span class="text-accent-blue">95%</span></div>
+                        <div class="bar-container"><div class="bar-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span class="mono">POWER BI / TABLEAU</span><span class="text-accent-blue">90%</span></div>
+                        <div class="bar-container"><div class="bar-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span class="mono">STATS / EXCEL</span><span class="text-accent-blue">88%</span></div>
+                        <div class="bar-container"><div class="bar-fill" style="width: 88%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span class="mono">ETL / CLEANING</span><span class="text-accent-blue">85%</span></div>
+                        <div class="bar-container"><div class="bar-fill" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact/Links -->
+            <div class="dashboard-card">
+                <div class="sql-header mono">-- JOIN CONTACT_METHODS</div>
+                <div class="space-y-2 text-xs mono">
+                    <div class="flex items-center gap-2">
+                        <span class="text-emerald-400">EMAIL:</span> analyst@example.com
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-emerald-400">LINKEDIN:</span> /in/dataprofile
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="col-span-12 lg:col-span-9 flex flex-col gap-6">
+            
+            <!-- Top Row: Experience KPI Blocks -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="dashboard-card bg-slate-800/50">
+                    <div class="kpi-label">Professional Experience</div>
+                    <div class="kpi-value">2+ Years</div>
+                </div>
+                <div class="dashboard-card bg-slate-800/50">
+                    <div class="kpi-label">Tools Mastered</div>
+                    <div class="kpi-value">8 Units</div>
+                </div>
+                <div class="dashboard-card bg-slate-800/50">
+                    <div class="kpi-label">Certifications</div>
+                    <div class="kpi-value">3 Records</div>
+                </div>
+            </div>
+
+            <!-- Professional Experience Table -->
+            <div class="dashboard-card">
+                <div class="sql-header mono">-- SELECT * FROM EXPERIENCE_LEDGER</div>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ROLE</th>
+                                <th>ORGANIZATION</th>
+                                <th>TIMELINE</th>
+                                <th>IMPACT_RECORDS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">Executive</td>
+                                <td class="text-slate-400">Redikon Pvt. Ltd.</td>
+                                <td class="mono text-xs">2021-06 : 2022-07</td>
+                                <td class="text-xs">Managed client records, project information, purchases, and billing entries. Optimized data entry workflows.</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">Customer Service Exec (L2)</td>
+                                <td class="text-slate-400">Tech Mahindra (Flipkart)</td>
+                                <td class="mono text-xs">2023-09 : 2024-04</td>
+                                <td class="text-xs">Resolved escalations with authorized decision-making. Analyzed inquiry trends to improve service.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lower Row: Education & Certifications -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Education Timeline as Bar Chart Style -->
+                <div class="dashboard-card">
+                    <div class="sql-header mono">-- GROUP BY EDUCATION_LEVEL</div>
+                    <div class="space-y-6 mt-4">
+                        <div class="relative pl-6 border-l-2 border-slate-700">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-400"></div>
+                            <div class="text-sm font-bold text-white">BBA</div>
+                            <div class="text-xs text-slate-400">Himalayan Garhwal University</div>
+                            <div class="text-[10px] mono text-accent-blue mt-1">2020-08 TO 2023-06 (COMPLETED)</div>
+                        </div>
+                        <div class="relative pl-6 border-l-2 border-slate-700">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-blue animate-pulse"></div>
+                            <div class="text-sm font-bold text-white">Data Analyst Nano Degree</div>
+                            <div class="text-xs text-slate-400">APJ Abdul Kalam University</div>
+                            <div class="text-[10px] mono text-accent-blue mt-1">2026-01 TO 2026-06 (EXPECTED)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="dashboard-card">
+                    <div class="sql-header mono">-- DISTINCT CERTIFICATIONS</div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="status-badge">Excel Skills (JP Morgan Chase)</span>
+                        <span class="status-badge">Data Core Concepts</span>
+                        <span class="status-badge">Complete Excel Mastery</span>
+                    </div>
+                    <div class="mt-6 p-3 bg-slate-900 rounded border border-slate-700">
+                        <div class="text-[10px] mono text-emerald-400 mb-1">STRENGTHS_LOG:</div>
+                        <div class="text-xs text-slate-300">
+                            > Data Wrangling<br>
+                            > Statistical Modeling<br>
+                            > ETL Pipelines (Power Query)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-center border-t border-slate-800 pt-6">
+        <p class="mono text-[10px] text-slate-500">COMMIT; -- END OF RESUME DATASET</p>
+    </footer>
+
+</body>
+</html>
