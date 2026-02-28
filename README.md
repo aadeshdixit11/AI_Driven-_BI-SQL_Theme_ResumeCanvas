@@ -51,3 +51,8 @@ Instead of a traditional text résumé, it leverages multiple AI tools to genera
 
 ## 🤝 Contributing
 This is a practice and portfolio project. Suggestions for improvements, new visualizations, or additional features are welcome.
+
+---
+
+👤 **Author**: Aadesh Dixit  
+📅 **Year**: 2026  
